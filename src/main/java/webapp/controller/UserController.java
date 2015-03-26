@@ -20,6 +20,8 @@ public class UserController {
 	public void register(User user, PrintWriter out) {
 		
 		out.println("user.name = " + user.getName() + "<br>");
+		out.println("user.age = " + user.getAge() + "<br>");
+		out.println("user.birthday = " + user.getBirthday() + "<br>");
 		out.println("<hr>");
 		
 		String[] job = user.getJob();

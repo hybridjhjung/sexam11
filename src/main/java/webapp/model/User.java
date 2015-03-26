@@ -1,13 +1,24 @@
 package webapp.model;
 
+import java.util.Date;
 import java.util.List;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
 	String name;
 	Integer age;
+	@DateTimeFormat(pattern="yyyyMMdd")
+	Date birthday;
 	String[] job;
 	List<Address> addrs;
 	
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 	public String getName() {
 		return name;
 	}
